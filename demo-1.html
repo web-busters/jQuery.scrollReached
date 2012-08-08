@@ -1,0 +1,51 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" charset="utf-8"></script>
+<script src="jQuery.scrollReached.js" charset="utf-8"></script>
+<script>
+$(function(){
+    $('img').scrollReached({one: true}, function(){
+        var $this = $(this);
+        // для наглядности покажем картинку не сразу, а через некоторое время
+        setTimeout(function(){
+            $this.attr({'src': 'demo-1.jpg'});
+        }, 1500);
+    });
+});
+</script>
+</head>
+<body>
+<br /><br />
+В самом низу страницы есть картинка большого размера и веса.<br />
+Нам не хочется грузить её сразу.<br />
+Только когда пользователь доскроллит страницу до неё.<br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Ещё ниже...<br /><br /><br />
+Через секунду вылетит птичка!..<br /><br />
+<img src="#" style="min-width: 200px; min-height: 200px" border="1" />
+<br /><br /><br />
+</body>
+</html>
