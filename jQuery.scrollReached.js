@@ -1,7 +1,9 @@
 /**
- *  "Доскроллили!"
- * плагин слежения за скроллом. вызывает функцию обратного вызова для всех элементов, до которых доскроллили
+ * "Доскроллили!"
+ * Плагин слежения за скроллом.
+ * Вызывает функцию обратного вызова для всех элементов, до которых доскроллили.
  */
+
 (function($){
     var $window = $(window);
     var listenerBinded = false;
@@ -50,8 +52,16 @@
 
                 objects[objects.length] = $this;
 
-                if (addTimer) {
-                    clearTimeout(addTimer);
+                /**
+                 * Если плагин вызывается только один раз для каждого элемента,
+                 * то вызываем функцию listener для каждого элемента отдельно.
+                 * Если плагин вызывается многократно, то вызываем функцию listener
+                 * один раз для всех видимых элементов.
+                 */
+                if (!options.one) {
+                    if (addTimer) {
+                        clearTimeout(addTimer);
+                    }
                 }
                 addTimer = setTimeout(listener, 100);
             });
@@ -97,7 +107,7 @@
         } else if (typeof method === 'object' || typeof method === 'function' || !method) {
             return methods.init.apply(this, arguments);
         } else {
-            $.error('Метод '+method+' отсутствует в jQuery.scrollReached');
+            $.error('Метод ' + method + ' отсутствует в jQuery.scrollReached');
         }
     };
 })(jQuery);
