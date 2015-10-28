@@ -1,7 +1,8 @@
 /**
- * "Доскроллили!"
- * Плагин слежения за скроллом.
- * Вызывает функцию обратного вызова для всех элементов, до которых доскроллили.
+ * this-source: https://github.com/web-busters/jQuery.scrollReached
+ * forked from: https://github.com/Lexx918/jQuery.scrollReached
+ * Plugin tracking scrolls - visibility detector.
+ * It calls the callback function for all elements which are visible.
  */
 
 (function($){
@@ -14,9 +15,12 @@
         var wTop = $window.scrollTop() + $window.height();
         for (var k = 0, object, oTop, callback, data; k < objects.length; k++) {
             object = objects[k];
+            data = object.data('scrollReached');
             oTop = object.offset().top;
+            if (typeof(data.space) !== 'undefined') {
+                wTop = wTop + data.space;
+            }
             if (wTop >= oTop) {
-                data = object.data('scrollReached');
                 callback = data.callback;
                 if (data.one) {
                     object.scrollReached('destroy');
@@ -41,6 +45,7 @@
                     $this.data('scrollReached', {
                         target: this,
                         one: !!options.one,
+                        space: options.space,
                         callback: callback
                     });
                 }
@@ -51,13 +56,6 @@
                 }
 
                 objects[objects.length] = $this;
-
-                /**
-                 * Если плагин вызывается только один раз для каждого элемента,
-                 * то вызываем функцию listener для каждого элемента отдельно.
-                 * Если плагин вызывается многократно, то вызываем функцию listener
-                 * один раз для всех видимых элементов.
-                 */
                 if (!options.one) {
                     if (addTimer) {
                         clearTimeout(addTimer);
