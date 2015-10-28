@@ -1,47 +1,48 @@
 <html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" charset="utf-8"></script>
-<script src="jQuery.scrollReached.js" charset="utf-8"></script>
-<script>
-$(function(){
-    var num = 0;
-    $('input[name="inp2"]').scrollReached(function(){
-        $('input[name="inp1"], input[name="inp2"]').val(++num);
-    });
-});
-</script>
-</head>
-<body>
-<br /><br />
-Два инпута. Оба хранят одинаковое значение - число срабатываний функции обратного вызова для НИЖНЕГО инпута.<br /><br />
-Пока в области видимости только первый из них - счётчик не меняется. А если второй - счётчик увеличивается.<br /><br />
-<input name="inp1" type="text" value="0" /><br /><br />
-Второй инпут далеко внизу...<br /><br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-Ещё ниже...<br /><br /><br />
-<input name="inp2" type="text" value="0" /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-</body>
+    <head>
+        <title>scrollReached plugin</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" charset="utf-8"></script>
+        <script src="jQuery.scrollReached.js" charset="utf-8"></script>
+        <script>
+            $(function () {
+                var num = 0;
+                $('input[name="inp2"]').scrollReached(function () {
+                    $('input[name="inp1"], input[name="inp2"]').val(++num);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <br /><br />
+        Два инпута. Оба хранят одинаковое значение - число срабатываний функции обратного вызова для НИЖНЕГО инпута.<br /><br />
+        Пока в области видимости только первый из них - счётчик не меняется. А если второй - счётчик увеличивается.<br /><br />
+        <input name="inp1" type="text" value="0" /><br /><br />
+        Второй инпут далеко внизу...<br /><br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        Ещё ниже...<br /><br /><br />
+        <input name="inp2" type="text" value="0" /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </body>
 </html>
